@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+</head>
+<style>
+    img {
+        border-radius: 50%;
+    }
+
+    #astro-pics {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+</style>
+<body>
+    <div id="oleg"></div>
+    <div id="david"></div>
+    <div id="anne"></div>
+
+    <!--<div id="astro-pics">
+        <img id="oleg" src="https://www.nasa.gov/sites/default/files/styles/946xvariable_height/public/jsc2014e088156.jpg?itok=zDabZ-ok" alt="Oleg Kononenko" width="200" height="200">
+        <img id="david" src="http://www.asc-csa.gc.ca/images/recherche/tiles/5f594103-dcf2-4e1d-bf95-b0bd43e9f6f1.jpg" alt="David Saint-Jacques" width="200" height="200">
+        <img id="anne" src="http://www.spacefacts.de/bios/portraits/astronauts/mcclain_anne.jpg" alt="Anne McClain" width="200" height="200">
+    </div>-->
+
+    <div id="astro-info">
+            <div id="space"></div>
+    <script>
+        fetch('http://api.open-notify.org/astros.json').then(response => {
+            return response.json();
+        }).then(data => {
+                console.log(data);
+            for(let i = 0; i < data.number; i++) {
+                if(data.people[i].name == "Oleg Kononenko") {
+                    document.querySelector("#oleg").appendChild(createAstronaut(data.people[i]));
+                    let imgOleg = document.createElement("img");
+                    // TODO: add element attributes
+                    imgOleg.src = "https://www.nasa.gov/sites/default/files/styles/946xvariable_height/public/jsc2014e088156.jpg?itok=zDabZ-ok";
+                    imgOleg.height = 300;
+                    imgOleg.width = 250;
+                    document.querySelector("#oleg").append(imgOleg);
+                } else if(data.people[i].name == "David Saint-Jacques") {
+                    document.querySelector("#david").appendChild(createAstronaut(data.people[i]));
+                    let imgDavid = document.createElement("img");
+                    imgDavid.src = "http://www.asc-csa.gc.ca/images/recherche/tiles/5f594103-dcf2-4e1d-bf95-b0bd43e9f6f1.jpg";
+                    imgDavid.height = 300;
+                    imgDavid.width = 250;
+                    document.querySelector("#david").append(imgDavid);
+                } else if(data.people[i].name == "Anne McClain") {
+                    document.querySelector("#anne").appendChild(createAstronaut(data.people[i]));
+                    let imgAnne = document.createElement("img");
+                    imgAnne.src = "http://www.spacefacts.de/bios/portraits/astronauts/mcclain_anne.jpg";
+                    imgAnne.height = 300;
+                    imgAnne.width = 250;
+                    document.querySelector("#anne").appendChild(imgAnne);
+                }
+                //document.querySelector("#space").appendChild(createAstronaut(data.people[i]));
+                
+            }
+            console.log(data);
+            console.log(data.people[0].name);
+        });
+
+        function createAstronaut(astro) {
+            console.log(astro.name[0]);
+            const item = document.createElement("p");
+            item.innerHTML = `<h2> ${astro.name} </h2>`;
+
+            return item;
+        }
+    </script>
+    
+</body>
+</html>
