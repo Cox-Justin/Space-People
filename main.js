@@ -6,7 +6,6 @@ fetch('http://api.open-notify.org/astros.json').then(response => {
         if(data.people[i].name == "Oleg Kononenko") {
             document.querySelector("#oleg").appendChild(createAstronaut(data.people[i]));
             let imgOleg = document.createElement("img");
-            // TODO: add element attributes
             imgOleg.src = "https://www.nasa.gov/sites/default/files/styles/946xvariable_height/public/jsc2014e088156.jpg?itok=zDabZ-ok";
             imgOleg.height = 300;
             imgOleg.width = 250;
