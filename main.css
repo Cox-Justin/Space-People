@@ -1,0 +1,22 @@
+img {
+    border-radius: 50%;
+}
+
+#astros {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 700px;
+}
+
+#olegInfo {
+    display: flex;
+    align-self: flex-end; /*??????*/
+}
+
+#davidPic {
+    display: flex;
+}
+#davidInfo {
+    display: flex;
+}

@@ -48,8 +48,24 @@
     console.log(spaceData.number);
     for(let i = 0; i < spaceData.number; i++) {
         if(spaceData.astros[i].name == "Oleg Kononenko") {
-            console.log(spaceData.astros[0].name);
-            document.querySelector("#oleg").appendChild(createAstronaut(spaceData.astros[i]));
+            let olegImg = document.createElement("img");
+            olegImg = new Image(250, 300);
+            olegImg.src = "https://www.nasa.gov/sites/default/files/styles/946xvariable_height/public/jsc2014e088156.jpg?itok=zDabZ-ok";
+
+            let days = `<h3>${spaceData.astros[i].days}</h3>`;
+
+            document.querySelector("#olegInfo").appendChild(createAstronaut(spaceData.astros[i]));
+            document.querySelector("#olegPic").append(olegImg);
+
+        } else if(spaceData.astros[i].name == "David Saint-Jacques") {
+            let davidImg = document.createElement("img");
+            davidImg = new Image(250, 300);
+            davidImg.src = "http://www.asc-csa.gc.ca/images/recherche/tiles/5f594103-dcf2-4e1d-bf95-b0bd43e9f6f1.jpg";
+
+            let days = `<h3>${spaceData.astros[i].days}</h3>`;
+
+            document.querySelector("#davidInfo").appendChild(createAstronaut(spaceData.astros[i]));
+            document.querySelector("#davidPic").append(davidImg);
         }
     }
     function createAstronaut(astro) {
