@@ -53,7 +53,7 @@
         }
     }
     function createAstronaut(astro) {
-        console.log(astro.name[0]);
+        console.log(astro.name);
         const item = document.createElement("p");
         item.innerHTML = `<h2> ${astro.name} </h2>`;
 

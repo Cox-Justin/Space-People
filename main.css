@@ -1,9 +1,0 @@
-img {
-    border-radius: 50%;
-}
-
-#astro-pics {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
