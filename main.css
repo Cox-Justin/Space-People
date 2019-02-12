@@ -6,12 +6,19 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 700px;
+}
+
+#oleg {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+}
+#olegPic {
+    width: 300px;
 }
 
 #olegInfo {
-    display: flex;
-    align-self: flex-end; /*??????*/
+    width: 300px;
 }
 
 #davidPic {

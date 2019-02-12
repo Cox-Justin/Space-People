@@ -52,20 +52,28 @@
             olegImg = new Image(250, 300);
             olegImg.src = "https://www.nasa.gov/sites/default/files/styles/946xvariable_height/public/jsc2014e088156.jpg?itok=zDabZ-ok";
 
-            let days = `<h3>${spaceData.astros[i].days}</h3>`;
+            let days = document.createElement("h2");
+            days.innerHTML = "Days in Space:";
+            let olegDays = document.createElement("h2");
+            olegDays.innerHTML = spaceData.astros[i].days;
+            console.log(olegDays);
 
-            document.querySelector("#olegInfo").appendChild(createAstronaut(spaceData.astros[i]));
+
             document.querySelector("#olegPic").append(olegImg);
+            document.querySelector("#olegInfo").appendChild(createAstronaut(spaceData.astros[i]));
+            document.querySelector("#olegInfo").append(days);
+            document.querySelector("#olegInfo").append(olegDays);
 
         } else if(spaceData.astros[i].name == "David Saint-Jacques") {
             let davidImg = document.createElement("img");
             davidImg = new Image(250, 300);
             davidImg.src = "http://www.asc-csa.gc.ca/images/recherche/tiles/5f594103-dcf2-4e1d-bf95-b0bd43e9f6f1.jpg";
 
-            let days = `<h3>${spaceData.astros[i].days}</h3>`;
+            let davidDays = `<h3>${spaceData.astros[i].days}</h3>`;
 
             document.querySelector("#davidInfo").appendChild(createAstronaut(spaceData.astros[i]));
             document.querySelector("#davidPic").append(davidImg);
+
         } else if(spaceData.astros[i].name == "Anne McClain") {
             let anneImg = document.createElement("img");
             anneImg = new Image(250, 300);
