@@ -66,6 +66,14 @@
 
             document.querySelector("#davidInfo").appendChild(createAstronaut(spaceData.astros[i]));
             document.querySelector("#davidPic").append(davidImg);
+        } else if(spaceData.astros[i].name == "Anne McClain") {
+            let anneImg = document.createElement("img");
+            anneImg = new Image(250, 300);
+            anneImg.src = "http://www.spacefacts.de/bios/portraits/astronauts/mcclain_anne.jpg";
+
+            let days = `<h3>${spaceData.astros[i].days}</h3>`;
+            document.querySelector("#anneInfo").appendChild(createAstronaut(spaceData.astros[i]));
+            document.querySelector("#annePic").append(anneImg);
         }
     }
     function createAstronaut(astro) {
