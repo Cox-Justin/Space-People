@@ -39,9 +39,9 @@
     {
         "number" : "3",
         "astros" : [
-            {"name" : "Oleg Kononenko", "days" : "30"},
-            {"name" : "David Saint-Jacques", "days" : "30"},
-            {"name" : "Anne McClain", "days" : "30"}
+            {"name" : "Oleg Kononenko", "times" : "4"},
+            {"name" : "David Saint-Jacques", "times" : "1"},
+            {"name" : "Anne McClain", "times" : "1"}
         ]
     };
 
@@ -52,36 +52,51 @@
             olegImg = new Image(250, 300);
             olegImg.src = "https://www.nasa.gov/sites/default/files/styles/946xvariable_height/public/jsc2014e088156.jpg?itok=zDabZ-ok";
 
-            let days = document.createElement("h2");
-            days.innerHTML = "Days in Space:";
-            let olegDays = document.createElement("h2");
-            olegDays.innerHTML = spaceData.astros[i].days;
-            console.log(olegDays);
+            let times = document.createElement("h2");
+            times.innerHTML = "<br>&nbsp;&nbsp;&nbsp;Number of Times In Space:";
+            let olegTimes = document.createElement("h1");
+            olegTimes.innerHTML = "&nbsp;&nbsp;&nbsp;" + spaceData.astros[i].times;
+            console.log(olegTimes);
 
 
             document.querySelector("#olegPic").append(olegImg);
             document.querySelector("#olegInfo").appendChild(createAstronaut(spaceData.astros[i]));
-            document.querySelector("#olegInfo").append(days);
-            document.querySelector("#olegInfo").append(olegDays);
+            document.querySelector("#olegInfo").append(times);
+            document.querySelector("#olegInfo").append(olegTimes);
 
         } else if(spaceData.astros[i].name == "David Saint-Jacques") {
             let davidImg = document.createElement("img");
             davidImg = new Image(250, 300);
             davidImg.src = "http://www.asc-csa.gc.ca/images/recherche/tiles/5f594103-dcf2-4e1d-bf95-b0bd43e9f6f1.jpg";
 
-            let davidDays = `<h3>${spaceData.astros[i].days}</h3>`;
+            let times = document.createElement("h2");
+            times.innerHTML = "<br>&nbsp;&nbsp;&nbsp;Number of Times In Space:";
+            let davidTimes = document.createElement("h1");
+            davidTimes.innerHTML = "&nbsp;&nbsp;&nbsp;" + spaceData.astros[i].times;
+            console.log(davidTimes);
 
-            document.querySelector("#davidInfo").appendChild(createAstronaut(spaceData.astros[i]));
+
             document.querySelector("#davidPic").append(davidImg);
+            document.querySelector("#davidInfo").appendChild(createAstronaut(spaceData.astros[i]));
+            document.querySelector("#davidInfo").append(times);
+            document.querySelector("#davidInfo").append(davidTimes);
 
         } else if(spaceData.astros[i].name == "Anne McClain") {
             let anneImg = document.createElement("img");
             anneImg = new Image(250, 300);
             anneImg.src = "http://www.spacefacts.de/bios/portraits/astronauts/mcclain_anne.jpg";
 
-            let days = `<h3>${spaceData.astros[i].days}</h3>`;
-            document.querySelector("#anneInfo").appendChild(createAstronaut(spaceData.astros[i]));
+            let times = document.createElement("h2");
+            times.innerHTML = "<br>&nbsp;&nbsp;&nbsp;Number of Times In Space:";
+            let anneTimes = document.createElement("h1");
+            anneTimes.innerHTML = "&nbsp;&nbsp;&nbsp;" + spaceData.astros[i].times;
+            console.log(anneTimes);
+
+
             document.querySelector("#annePic").append(anneImg);
+            document.querySelector("#anneInfo").appendChild(createAstronaut(spaceData.astros[i]));
+            document.querySelector("#anneInfo").append(times);
+            document.querySelector("#anneInfo").append(anneTimes);
         }
     }
     function createAstronaut(astro) {
