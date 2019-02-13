@@ -23,7 +23,7 @@ img {
 
 /* OLEG KONONENKO*/
 #oleg {
-    width: 600px;
+    width: 800px;
     display: flex;
     flex-direction: row;
 }
@@ -32,12 +32,12 @@ img {
 }
 
 #olegInfo {
-    width: 400px;
+    width: 500px;
 }
 
 /* DAVID ST-JACQUES*/
 #david {
-    width: 600px;
+    width: 800px;
     display: flex;
     flex-direction: row;
 }
@@ -46,12 +46,12 @@ img {
 }
 
 #davidInfo {
-    width: 400px;
+    width: 500px;
 }
 
 /* ANNE MCCLAIN */
 #anne {
-    width: 600px;
+    width: 800px;
     display: flex;
     flex-direction: row;
 }
@@ -60,5 +60,5 @@ img {
 }
 
 #anneInfo {
-    width: 400px;
+    width: 500px;
 }
