@@ -18,12 +18,12 @@ img {
 #astros {
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 700px;
 }
 
 /* OLEG KONONENKO*/
 #oleg {
-    width: 800px;
+    width: 600px;
     display: flex;
     flex-direction: row;
 }
@@ -32,12 +32,12 @@ img {
 }
 
 #olegInfo {
-    width: 500px;
+    width: 400px;
 }
 
 /* DAVID ST-JACQUES*/
 #david {
-    width: 800px;
+    width: 600px;
     display: flex;
     flex-direction: row;
 }
@@ -46,12 +46,12 @@ img {
 }
 
 #davidInfo {
-    width: 500px;
+    width: 400px;
 }
 
 /* ANNE MCCLAIN */
 #anne {
-    width: 800px;
+    width: 600px;
     display: flex;
     flex-direction: row;
 }
@@ -60,5 +60,5 @@ img {
 }
 
 #anneInfo {
-    width: 500px;
+    width: 400px;
 }
