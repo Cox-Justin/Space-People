@@ -53,7 +53,7 @@
             olegImg.src = "https://www.nasa.gov/sites/default/files/styles/946xvariable_height/public/jsc2014e088156.jpg?itok=zDabZ-ok";
 
             let times = document.createElement("h2");
-            times.innerHTML = "<br>&nbsp;&nbsp;&nbsp;Number of Times In Space:";
+            times.innerHTML = "<br>&nbsp;&nbsp;&nbsp;Times In Space:";
             let olegTimes = document.createElement("h1");
             olegTimes.innerHTML = "&nbsp;&nbsp;&nbsp;" + spaceData.astros[i].times;
             console.log(olegTimes);
@@ -70,7 +70,7 @@
             davidImg.src = "http://www.asc-csa.gc.ca/images/recherche/tiles/5f594103-dcf2-4e1d-bf95-b0bd43e9f6f1.jpg";
 
             let times = document.createElement("h2");
-            times.innerHTML = "<br>&nbsp;&nbsp;&nbsp;Number of Times In Space:";
+            times.innerHTML = "<br>&nbsp;&nbsp;&nbsp;Times In Space:";
             let davidTimes = document.createElement("h1");
             davidTimes.innerHTML = "&nbsp;&nbsp;&nbsp;" + spaceData.astros[i].times;
             console.log(davidTimes);
@@ -87,7 +87,7 @@
             anneImg.src = "http://www.spacefacts.de/bios/portraits/astronauts/mcclain_anne.jpg";
 
             let times = document.createElement("h2");
-            times.innerHTML = "<br>&nbsp;&nbsp;&nbsp;Number of Times In Space:";
+            times.innerHTML = "<br>&nbsp;&nbsp;&nbsp;Times In Space:";
             let anneTimes = document.createElement("h1");
             anneTimes.innerHTML = "&nbsp;&nbsp;&nbsp;" + spaceData.astros[i].times;
             console.log(anneTimes);
